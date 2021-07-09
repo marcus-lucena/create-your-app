@@ -35,6 +35,10 @@ export default {
       type: String,
       default: "none",
     },
+    label: {
+      type: String,
+      default: "Input",
+    },
     placeholder: {
       type: String,
       default: "Digite aqui o texto",
@@ -54,6 +58,11 @@ export default {
       validateMessage: "Required field",
       validateType: "danger",
     };
+  },
+  methods: {
+    validate() {
+      return true;
+    },
   },
 };
 </script>

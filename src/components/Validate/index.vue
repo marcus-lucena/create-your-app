@@ -1,6 +1,6 @@
 <template>
-  <div class="validate" v-show="show">
-    <p :class="type">
+  <div class="validate" v-if="show">
+    <p :class="{ type }">
       {{ message }}
     </p>
   </div>

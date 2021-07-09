@@ -1,7 +1,15 @@
 <template>
   <div class="image-upload">
     <label>{{ label }}</label>
-    <input type="file" accept="image/" @change="upload" draggable="true" />
+    <input
+      type="file"
+      accept="image/"
+      :name="name"
+      @change="upload"
+      draggable="true"
+      :placeholder="placeholder"
+      :alt="alt"
+    />
   </div>
 </template>
 
@@ -9,9 +17,29 @@
 export default {
   name: "ImageUpload",
   props: {
+    classNames: {
+      type: String,
+      default: "input-group",
+    },
+    name: {
+      type: String,
+      default: "none",
+    },
     label: {
       type: String,
       default: "Add image",
+    },
+    placeholder: {
+      type: String,
+      default: "Digite aqui o texto",
+    },
+    alt: {
+      type: String,
+      default: "Campo de texto",
+    },
+    validateShow: {
+      type: Boolean,
+      default: false,
     },
   },
   data() {

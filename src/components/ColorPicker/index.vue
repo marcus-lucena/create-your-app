@@ -8,6 +8,7 @@
       <button
         class="color"
         v-for="color in rangeColors"
+        :key="color"
         :style="backgroundColor(color)"
         @click="selectColor(color)"
       ></button>

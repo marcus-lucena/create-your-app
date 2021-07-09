@@ -4,7 +4,7 @@
       v-model="valueSelected"
       @select="$emit('select', $event.target.value)"
     >
-      <option v-for="item in values" @key="item.value" :value="item.value">
+      <option v-for="item in values" :key="item.value" :value="item.value">
         {{ item.label }}
       </option>
     </select>
@@ -21,9 +21,7 @@ export default {
     Validate,
   },
   props: {
-    values: {
-      default: [],
-    },
+    values: [],
   },
   data() {
     return {
