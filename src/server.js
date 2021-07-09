@@ -1,18 +1,15 @@
-import { createServer, Model } from "miragejs"
+import { createServer, Model } from "miragejs";
 
 export function makeServer({ environment = "development" } = {}) {
-    let server = createServer({
-        environment,
+  let server = createServer({
+    environment,
 
-        models: {
-        },
+    models: {},
 
-        seeds(server) {
-        },
+    seeds(server) {},
 
-        routes() {
-        },
-    })
+    routes() {},
+  });
 
-    return server
+  return server;
 }
