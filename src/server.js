@@ -4,11 +4,17 @@ export function makeServer({ environment = "development" } = {}) {
   let server = createServer({
     environment,
 
-    models: {},
+    models: {
+      app: Model,
+    },
 
-    seeds(server) {},
+    routes() {
+      this.namespace = "api";
 
-    routes() {},
+      this.get("/users", (schema) => {
+        return schema.apps.all();
+      });
+    },
   });
 
   return server;
